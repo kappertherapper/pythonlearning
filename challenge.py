@@ -166,3 +166,79 @@ def answer21(data):
     return total // count
 
 --------------------------------------------------
+
+def answer22(data):
+    return data.count('.png')
+
+--------------------------------------------------
+
+def answer23(lst):
+    d = {}
+    for key, value in lst:
+        d[key] = value
+    return d
+
+--------------------------------------------------
+
+def answer24(num):
+    lst = list(range(1,101))
+
+    i = 0
+    while i < len(lst):
+        if lst[i] % num == 0:
+            lst.pop(i)
+        else:
+            i += 1
+     return lst
+
+--------------------------------------------------
+
+def answer27():
+    return 'network'
+
+--------------------------------------------------
+
+def answer28(list):
+    return list.split(', ')[3]
+
+--------------------------------------------------
+
+def answer29():
+    return 39
+
+--------------------------------------------------
+
+def answer30():
+    return 3775708311
+
+--------------------------------------------------
+
+def answer31(data):
+    return '0.client-channel.google.com'    
+
+
+--------------------------------------------------
+
+def answer32(data):
+    plusfloor = '^'
+    minusfloor = 'v'
+    plusroom = '>'
+    minusroom = '<'
+    
+    floorCount = 0
+    roomCount = 0
+    
+    for i in data:
+        if i == plusfloor:
+            floorCount += 1
+        elif i == plusroom:
+            roomCount += 1
+        elif i == minusfloor:
+            floorCount -= 1
+        else:
+            roomCount -= 1    
+    
+    return (floorCount, roomCount)
+
+
+--------------------------------------------------
